@@ -37,6 +37,22 @@ export class Click implements Performable {
     }
 }
 
+export class ClickByLocator implements Performable {
+    private readonly selector: string;
+
+    private constructor(selector: string) {
+        this.selector = selector;
+    }
+
+    static on(selector: string): ClickByLocator {
+        return new ClickByLocator(selector);
+    }
+
+    async performAs(page: Page): Promise<void> {
+        await page.locator(this.selector).click({ force: true });
+    }
+}
+
 export class Navigate implements Performable {
     private readonly url: string;
 

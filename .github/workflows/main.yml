@@ -2,9 +2,12 @@ name: Retos - Playwright Tests
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, master]
+  
   push:
-    branches: [main]
+    branches: [main, master]
+  
+  workflow_dispatch:
 
 jobs:
   test:
@@ -28,6 +31,16 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+        env:
+          BASE_URL: https://www.saucedemo.com/                                                 
+          STANDARD_USER: standard_user                                                         
+          LOCKED_OUT_USER: locked_out_user                                                     
+          PROBLEM_USER: problem_user                                                           
+          PERFORMANCE_GLITCH_USER: performance_glitch_user                                     
+          PASSWORD: secret_sauce                                                               
+          PURCHASE_FIRST_NAME: John                                                            
+          PURCHASE_LAST_NAME: Doe                                                             
+          PURCHASE_POSTAL_CODE: 12345 
 
       - name: Archive Playwright Test Results
         uses: actions/upload-artifact@v4
