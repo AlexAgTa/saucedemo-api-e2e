@@ -1,0 +1,25 @@
+{
+  "name": "saucedemo-api-e2e",
+  "version": "1.0.0",
+  "description": "### Descripción",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexAgTa/saucedemo-api-e2e.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexAgTa/saucedemo-api-e2e/issues"
+  },
+  "homepage": "https://github.com/AlexAgTa/saucedemo-api-e2e#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0"
+  }
+}
