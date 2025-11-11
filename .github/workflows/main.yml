@@ -29,6 +29,9 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+      - name: Grant execute permission to API test script
+        run: chmod +x tests/api/Petstore/run_api_tests.sh
+
       - name: Run Petstore API tests
         run: ./tests/api/Petstore/run_api_tests.sh
 
