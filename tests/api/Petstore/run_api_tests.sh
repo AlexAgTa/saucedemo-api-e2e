@@ -10,7 +10,7 @@ set -e
 # --- Configuration ---
 BASE_URL="https://petstore.swagger.io/v2"
 API_KEY="special-key"
-PET_ID=1
+PET_ID=2
 NEW_PET_NAME="MyUpdatedPet-$(shuf -i 1000-9999 -n 1)" # Generate a random name
 
 # --- Helper Function to Check Last Command ---
